@@ -1,0 +1,134 @@
+/* TURN CSS INTO SCSS
+1. Identify repitition in colors + rulesets
+2. Define variables, mixins and apply nesting logic 
+*/
+
+body {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #1d1d1d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+.navbar-container,
+.home-container,
+.about-container,
+.footer-container {
+  border: solid 1px grey;
+  min-height: 100px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  background-color: #9b5de5;
+}
+
+.navbar-container h2:hover {
+  transform: rotate(10deg);
+}
+
+.navbar-container button {
+  background-color: #fee440;
+  font-weight: bold;
+}
+
+.navbar-container button:hover {
+  background-color: #f15bb5;
+  cursor: pointer;
+}
+
+.home-container {
+  background-color: #f15bb5;
+}
+
+.home-container h2:hover {
+  transform: rotate(-10deg);
+}
+
+.home-container button {
+  background-color: #9b5de5;
+  font-weight: bold;
+}
+
+.home-container button:hover {
+  background-color: #fee440;
+  cursor: pointer;
+}
+
+.about-container {
+  background-color: #fee440;
+}
+
+.about-container h2:hover {
+  transform: rotate(15deg);
+}
+
+.about-container button {
+  background-color: #f15bb5;
+  font-weight: bold;
+}
+
+.about-container button:hover {
+  background-color: #9b5de5;
+  cursor: pointer;
+}
+
+footer h2:hover {
+  transform: rotate(-15deg);
+}
+
+.footer-children-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-child-one,
+.footer-child-two,
+.footer-child-three {
+  height: 100px;
+  width: 100px;
+  border: solid 1px grey;
+  margin-bottom: 1rem;
+}
+
+.footer-child-one {
+  background-color: #9b5de5;
+}
+
+.footer-child-one:hover {
+  background-color: #f15bb5;
+  transform: scale(1.2);
+}
+
+.footer-child-two {
+  background-color: #f15bb5;
+}
+
+.footer-child-two:hover {
+  background-color: #9b5de5;
+  transform: scale(1.2);
+}
+
+.footer-child-three {
+  background-color: #fee440;
+}
+
+.footer-child-three:hover {
+  background-color: #f15bb5;
+  transform: scale(1.2);
+}
