@@ -1,0 +1,83 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+body {
+  box-sizing: border-box;
+}
+
+.App {
+  color: $grey;
+  font-family: $my-font;
+  max-width: 600px;
+  margin: 0 auto;
+  button.change-color {
+    @include buttons($purple, $pink);
+    color: white;
+    margin: 1rem auto;
+  }
+  nav {
+    @include container(600px, 100px, $purple);
+    h2:hover {
+      @include tilt(10deg);
+    }
+    button {
+      @include buttons($yellow, $pink);
+    }
+  }
+  header {
+    @include container(500px, 200px, $pink);
+    h2:hover {
+      @include tilt(-30deg);
+    }
+    button {
+      @include buttons($purple, $yellow);
+    }
+  }
+  main {
+    @include container(200px, 150px, $yellow);
+    h2:hover {
+      @include tilt(50deg);
+    }
+    button {
+      @include buttons($pink, $purple);
+    }
+  }
+  footer {
+    @include container(600px, 300px);
+    .footer-children-wrapper {
+      @include container-row;
+      .footer-child-one {
+        @include footer-box($purple);
+        &:hover {
+          @include zoom($pink, 1.2);
+        }
+      }
+      .footer-child-two {
+        @include footer-box($pink);
+        &:hover {
+          @include zoom($purple, 1.5);
+        }
+      }
+      .footer-child-three {
+        @include footer-box($yellow);
+        &:hover {
+          @include zoom($purple, 2);
+        }
+      }
+    }
+  }
+}
+
+.App.dark {
+  background-color: $grey;
+  color: white;
+  nav {
+    background-color: $blue;
+  }
+  header {
+    background-color: $green;
+  }
+  main {
+    background-color: $red;
+  }
+}

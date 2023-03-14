@@ -1,0 +1,44 @@
+@mixin container($width: null, $height: null, $color: null) {
+  max-width: $width;
+  min-height: $height;
+  border: solid 1px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: $color;
+}
+
+@mixin tilt($angle) {
+  transform: rotate($angle);
+}
+
+@mixin buttons($color, $hover-color) {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  background-color: $color;
+  font-weight: bold;
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+@mixin container-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@mixin footer-box($color) {
+  height: 100px;
+  width: 100px;
+  border: solid 1px grey;
+  margin-bottom: 1rem;
+  background-color: $color;
+}
+
+@mixin zoom($color, $scale) {
+  transform: scale($scale);
+  background-color: $color;
+}
